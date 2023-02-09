@@ -1,0 +1,30 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+#box{
+    display: flex;
+}
+#registration-form{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+#login-form{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+form {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    background-color: aqua;
+    width: 22.5vw;
+    padding-top: 5vh;
+}
