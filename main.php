@@ -8,29 +8,25 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<a id="logout" href='logout.php'>Logout</a><br><br>
-<div id="forms">
-    <?php
+<?php
     session_start();
         if (isset($_SESSION['username'])){
     $username2 = $_SESSION['username'];
-    echo "<div> Witaj ".$username2 ."</div> <br>";
  }
  else {
     header('Location: index.php');
  }
- 
-
-
-
 ?>
+<div id="forms">
 <h2>Wprowadz swoje dane</h2>
 <form method="post">
         <input type="text" name="name" id="Name" placeholder="Name">
         <input type="text" name="email" id="email" placeholder="E-mail">
         <input type="text" name="password" id="Password" placeholder="Password">
         <button type="submit" name="add_userdata">Ustaw</button>
-</form><br>
+</form>
+
+<br>
     <?php 
 
 
@@ -54,7 +50,6 @@
     }
     $sql = "SELECT * FROM Products";
     $result = mysqli_query($conn, $sql);
-    echo "<h1>PIZZAS</h1>";
     echo "<div><table><thead><tr><th>Name</th><th>Price</th><th>Description</th></tr></thead><tbody>";
     while($row = mysqli_fetch_assoc($result)) {
     echo "<tr>
@@ -65,5 +60,19 @@
     }
     echo "</tbody></table></div><br>";
  ?> 
+<button>Capriciosa</button>
+<button>Gyros</button>
+<button>Margharita</button>
+<button>Hawaii</button>
+
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="logout.php" id="log">Logout</a>
 </body>
 </html>
