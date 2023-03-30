@@ -18,7 +18,7 @@
  }
 ?>
 <div id="forms">
-<h2>Wprowadz swoje dane</h2>
+<h2>Zmień swoje dane</h2>
 <form method="post">
         <input type="text" name="name" id="Name" placeholder="Name">
         <input type="text" name="email" id="email" placeholder="E-mail">
@@ -34,7 +34,7 @@
     $servername ="localhost";
     $username = "root";
     $password = "";
-    $dbname = "Pizzeria";
+    $dbname = "pizzeria";
     $conn =mysqli_connect($servername,$username,$password,$dbname);
 
     if(isset($_POST['add_userdata'])){
@@ -60,10 +60,38 @@
     }
     echo "</tbody></table></div><br>";
  ?> 
-<button>Capriciosa</button>
-<button>Gyros</button>
-<button>Margharita</button>
-<button>Hawaii</button>
+ <div id="buttons">
+<button name="Capriciosa">Capriciosa</button>
+
+
+<button name="Gyros">Gyros</button>
+
+
+<button name="Margharita">Margharita</button>
+
+
+<button name="Hawaii">Hawaii</button>
+</div>
+<br>
+<div id="koszyk">
+    <h2>Twoje zamównienie:</h2>
+<table>
+<?php 
+
+?>
+</table>
+    <button type="submit" name="addorder">Wyślij zamówienie</button>
+</div>
+
+
+<?php 
+
+
+
+
+
+
+?>
 
 </div>
  
